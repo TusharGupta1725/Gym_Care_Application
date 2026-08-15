@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_search_bg">
+
+    <LinearLayout
+        android:id="@+id/layoutMainRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="25dp"
+            app:cardBackgroundColor="#1E1E1E">
+            <ImageView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_profile" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textMemberName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Member Name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editMemberNameRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Member Name"
+                    android:textColor="#00E676"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:padding="0dp"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textMemberPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1234567890"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textPaymentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="PAID"
+            android:textColor="#00E676"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="#2200E676" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutExpandableMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        android:background="#1A1A1A">
+
+        <TextView
+            android:id="@+id/textExpandedDue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Due: ₹0"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/btnRename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Rename"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/btnFullEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Full Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/btnPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Record New Payment"
+            android:textColor="#00E676"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackground"/>
+
+        <TextView
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Contact"
+            android:textColor="#FF5252"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackground"/>
+    </LinearLayout>
+</LinearLayout>

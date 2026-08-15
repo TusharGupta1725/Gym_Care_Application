@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Record_Supplement_Sale"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:inputType="text"
+        android:autofillHints="name"
+        android:id="@+id/editSuppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Customer_Name"
+        android:textColorHint="#888888"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF5722"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:autofillHints="phone"
+        android:id="@+id/editSuppPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number_hint"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textColorHint="#888888"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF5722"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:inputType="text"
+        android:autofillHints="name"
+        android:id="@+id/editSuppItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Item_Name"
+        android:textColorHint="#888888"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF5722"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editSuppItemPrice"
+        android:layout_width="match_parent"
+        android:autofillHints="none"
+        android:importantForAutofill="no"
+        android:layout_height="wrap_content"
+        android:hint="@string/Total_Item"
+        android:inputType="number"
+        android:textColorHint="#888888"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF5722"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editSuppAmountPaid"
+        android:layout_width="match_parent"
+        android:autofillHints="none"
+        android:importantForAutofill="no"
+        android:layout_height="wrap_content"
+        android:hint="@string/Amount_Paid_Now"
+        android:inputType="number"
+        android:textColorHint="#888888"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF5722"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btnSaveSupplement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00E676"
+        android:text="@string/Save_Sale"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+</LinearLayout>

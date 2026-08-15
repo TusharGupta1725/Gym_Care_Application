@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editUpdateName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_search_bg"
+            android:textColor="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editUpdatePhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_search_bg"
+            android:textColor="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:inputType="phone"
+            android:maxLength="10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Account Status"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/textCurrentPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Plan: Loading..."
+                android:textColor="#B3B3B3"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textTotalPaid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Paid: ₹0"
+                    android:textColor="#00E676"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textCurrentDue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Due: ₹0"
+                    android:textColor="#FF5722"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="end"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textHistoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="plan history"
+            android:textAllCaps="true"
+            android:textColor="#555555"
+            android:textSize="12sp"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="View Full Purchase Ledger"
+            android:backgroundTint="#333333"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extend Plan (Optional)"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgExtendPlans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbExtendNone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Extension (Just Updating Details / Dues)"
+                android:textColor="#00E676"
+                android:buttonTint="#00E676"
+                android:checked="true"
+                android:padding="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbExtendPlan1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add 1 Month (+₹800)"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#FF5722"
+                android:padding="8dp"/>
+            <RadioButton
+                android:id="@+id/rbExtendPlan3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add 3 Months (+₹2000)"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#FF5722"
+                android:padding="8dp"/>
+            <RadioButton
+                android:id="@+id/rbExtendPlan6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add 6 Months (+₹4000)"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#FF5722"
+                android:padding="8dp"/>
+            <RadioButton
+                android:id="@+id/rbExtendPlan12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add 1 Year (+₹8000)"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#FF5722"
+                android:padding="8dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Deposit Amount (₹)"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+        <EditText
+            android:id="@+id/editNewDeposit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_search_bg"
+            android:textColor="#00E676"
+            android:textStyle="bold"
+            android:hint="Enter ₹ amount paying today"
+            android:textColorHint="#555555"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="32dp"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Save &amp; Update Account"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FF5722" />
+
+    </LinearLayout>
+</ScrollView>

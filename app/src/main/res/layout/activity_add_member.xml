@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Add_New_Member"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Profile Photo Capture -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPhoto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="60dp"
+            app:cardBackgroundColor="#1E1E1E"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imgMemberPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="#888888" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textPhotoHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Tap_to_capture_photo"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/cardPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Personal Details Section -->
+        <LinearLayout
+            android:id="@+id/divInputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_search_bg"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/textPhotoHint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Name"
+                android:textColor="#B3B3B3"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/editMemberName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FF5722"
+                android:hint="@string/example"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number_hint"
+                android:textColor="#B3B3B3"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+            <EditText
+                android:id="@+id/editMemberPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FF5722"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                android:maxLength="10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Address"
+                android:textColor="#B3B3B3"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+            <EditText
+                android:id="@+id/editMemberAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FF5722"
+                android:hint="@string/City_or_local_area"
+                android:inputType="textPostalAddress" />
+        </LinearLayout>
+
+        <!-- Financial & Plan Section -->
+        <LinearLayout
+            android:id="@+id/divPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_search_bg"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintTop_toBottomOf="@id/divInputs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Select_Membership_Plan"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgPlans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbPlan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one_month"
+                    android:textColor="#B3B3B3"
+                    android:buttonTint="#FF5722"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbPlan3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/three_month"
+                    android:textColor="#B3B3B3"
+                    android:buttonTint="#FF5722"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbPlan6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/six_month"
+                    android:textColor="#B3B3B3"
+                    android:buttonTint="#FF5722"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbPlan12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/twelve_month"
+                    android:textColor="#B3B3B3"
+                    android:buttonTint="#FF5722"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+            <!-- CRM: Custom Date Picker -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plan Start Date"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/btnSelectDate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Starts Today (Tap to Change)"
+                android:textColor="#00E676"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="#1A1A1A"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid Now"
+                android:textColor="#B3B3B3"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+            <EditText
+                android:id="@+id/editAmountPaid"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FF5722"
+                android:hint="Enter amount in ₹"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Mode"
+                android:textColor="#B3B3B3"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <RadioGroup
+                android:id="@+id/rgPaymentMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FF5722"
+                    android:paddingEnd="16dp"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/rbOnline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Online (UPI)"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FF5722" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveMember"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="Save Member"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/divPlan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
